@@ -1,0 +1,14 @@
+{
+  "name": "66 Days Unlocked",
+  "folder": "phantombladezero_66daysunlocked",
+  "author": "Kintaro",
+  "version": "1.0",
+  "description": "Unlocks the 66 Days difficulty from the start: begin a new game in it without beating the game once.",
+  "kind": "pakfile",
+  "game": "phantombladezero",
+  "gameFolder": "PBZ",
+  "paksPath": "ProjectPBZ\\Content\\Paks",
+  "gameVersion": "CL-301524_JKS-17219",
+  "engine": "UE5_7",
+  "pakName": "phantombladezero_66daysunlocked_P"
+}

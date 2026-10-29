@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openmods.nexus/openmods.schema.json",
+  "openmods": 1,
+  "name": "66 Days Unlocked",
+  "summary": "Unlocks the 66 Days difficulty from the start: begin a new game in it without beating the game once.",
+  "games": ["phantom-blade-zero"],
+  "tags": ["gameplay"],
+  "gameVersions": ["Release (Steam build 26266538)"],
+  "cover": "docs/cover.png"
+}
