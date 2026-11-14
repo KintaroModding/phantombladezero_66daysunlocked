@@ -1,6 +1,6 @@
 # 66 Days Unlocked
 
-Unlocks the 66 Days difficulty from the start: begin a new game in it without beating the game once.
+Unlocks the 66 Days difficulty from the start: begin a new game in it without beating the game once. A PBZModLoader mod.
 
 ## What it does
 
@@ -8,7 +8,9 @@ Unlocks the 66 Days difficulty from the start: begin a new game in it without be
   yet.
 - 66 Days itself stays as the game makes it: the Hellwalker rules and 66 deaths. At 0, the game deletes the save.
 - Nothing else changes: the other difficulties and New Game Plus stay as they are.
-- The mod writes nothing into your save. Without the mod, 66 Days is locked again until you finish the game.
+
+It is a PBZModLoader mod: a script in the game's own script engine. It replaces no game file and writes nothing into
+the save: without the mod, 66 Days is locked again until you finish the game.
 
 ## Screenshots
 
@@ -16,41 +18,55 @@ Unlocks the 66 Days difficulty from the start: begin a new game in it without be
 
 ## How to install
 
-1. Download the zip of the latest release on GitHub (`phantombladezero_66daysunlocked_<version>.zip`).
-2. Open the game folder `ProjectPBZ\Content\Paks\`. If it has no folder `~mods`, create it.
-3. Unpack the three files of the zip (`phantombladezero_66daysunlocked_P.pak`, `.utoc` and `.ucas`) into `ProjectPBZ\Content\Paks\~mods\`.
+1. Install [PBZModLoader](https://github.com/KintaroModding/phantombladezero_pbzmodloader) 2.1.0 or later.
+2. Download the zip of the latest release on GitHub (`phantombladezero_66daysunlocked_<version>.zip`).
+3. Unpack it into the game folder (the folder that holds `ProjectPBZ`). It adds the folder
+   `ProjectPBZ\PBZModLoader\mods\phantombladezero_66daysunlocked\` with `main.js` and the settings file.
 4. Start the game.
 
-To update the mod, replace the three files with the ones of the new release. To remove it, delete the three files.
+To check that it runs: `ProjectPBZ\PBZModLoader\loader.log` has the line
+`[PBZMOD] [66 Days Unlocked] <version> started; settings: ...`.
+
+To update the mod, replace `main.js` with the one of the new release; keep your settings file (a setting that it does
+not have keeps its default). To remove the mod, delete the folder `ProjectPBZ\PBZModLoader\mods\phantombladezero_66daysunlocked\`.
 
 ## How to use
 
 Start a new game and choose 66 Days in the difficulty menu.
 
+## Settings
+
+The settings are in `ProjectPBZ\PBZModLoader\mods\phantombladezero_66daysunlocked\phantombladezero_66daysunlocked.txt`. Open it with a text editor,
+change a value and save: the difficulty menu takes it the next time it opens, without a restart. Without the
+file the mod writes it with the defaults below. Keys are not case-sensitive; `;` or `#` starts a comment.
+
+**With Mods Menu** (0.9.0 or later) in the game, the mod adds its page to Mods Menu's tab in the game's settings, and
+the page's settings are the ones that count: Mods Menu keeps them in its own file in the game's `Saved` folder, and
+the file in the mod's folder is not read then.
+
+| Setting | Default | What it does |
+|---|---|---|
+| `Enable` | `On` | `Off`: the game's lock (66 Days opens after a finished game) |
+
 ## Compatibility
 
-- Game version: Release (Steam build 26266538) (`CL-301524_JKS-17219`).
-- No UE4SS needed.
-- The mod replaces the game's script for the difficulty menu, `ProjectPBZ/Content/JavaScript/UI/Widget/DifficultySelect_V2.js`.
-  A mod that replaces the same file conflicts with this one; only one of them works.
-- A game update that changes this script needs a new version of the mod.
+- Game version: Steam build 26367565 (`CL-302256_JKS-17280`).
+- Needs PBZModLoader 2.1.0 or later. Mods Menu is optional.
+- Version 1.0 of this mod (the files `phantombladezero_66daysunlocked_P.pak`, `.utoc`, `.ucas` in `~mods`): remove
+  them first. 2.0 replaces no game script.
+- Mortal Dusk also opens 66 Days; both together work.
 
 ## Known issues
 
-None yet.
+- Not tested in game yet.
 
 ## How to build
 
-Anyone can build this mod from its source code and check that the download matches it.
-
-1. Install the tools: Windows PowerShell 5.1 (part of Windows), [repak](https://github.com/trumank/repak/releases)
-   v0.2.3 and [retoc](https://github.com/trumank/retoc/releases) v0.1.5 in a folder `_tools\repak\` and `_tools\retoc\`
-   above the repository (or set `UE5_TOOLS`); optional: [Node.js](https://nodejs.org/) for the check of the script.
-   `README.md` has the details.
-2. Build it: `powershell -ExecutionPolicy Bypass -File .\build.ps1`
-3. Find the files: `dist\phantombladezero_66daysunlocked_P.pak`, `.utoc` and `.ucas`.
+There is nothing to build: `src\phantombladezero_66daysunlocked\` is the mod folder (`main.js` and the settings file).
+`tests\test_mod.js` runs the script outside the game with Node.js and stand-ins for the game: `node tests\test_mod.js`.
+`README.md` has the details.
 
 ## Credits
 
-Made by Kintaro. MIT license: you may use, change and share this mod. Phantom Blade Zero and its files belong to
-their makers; the mod changes only what is listed above.
+Made by Kintaro. MIT license: you may use, change and share this mod. PBZModLoader is made by LKF, its fork by
+KintaroModding. Phantom Blade Zero and its files belong to their makers.

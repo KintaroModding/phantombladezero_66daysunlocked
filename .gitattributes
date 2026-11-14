@@ -4,3 +4,6 @@
 *.pak binary
 *.utoc binary
 *.ucas binary
+*.locres binary
+# Settings files that players edit by hand: Windows line ends (PBZModLoader mods: in the mod folder)
+src/*/*.txt text eol=crlf

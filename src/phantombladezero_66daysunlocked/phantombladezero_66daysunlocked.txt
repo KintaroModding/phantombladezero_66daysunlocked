@@ -1,0 +1,3 @@
+; 66 Days Unlocked settings. Change a value and save; the difficulty menu takes it the next time it opens.
+; Enable: On (66 Days open from the start), or Off (the game's lock: open after a finished game).
+Enable=On

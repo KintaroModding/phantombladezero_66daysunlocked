@@ -2,13 +2,13 @@
   "name": "66 Days Unlocked",
   "folder": "phantombladezero_66daysunlocked",
   "author": "Kintaro",
-  "version": "1.0",
-  "description": "Unlocks the 66 Days difficulty from the start: begin a new game in it without beating the game once.",
-  "kind": "pakfile",
+  "version": "2.0",
+  "description": "Unlocks the 66 Days difficulty from the start: begin a new game in it without beating the game once. A PBZModLoader mod; no game file replaced, nothing written into the save; settings in a text file in its folder, or on its Mods Menu page.",
+  "kind": "pbzmodloader",
   "game": "phantombladezero",
   "gameFolder": "PBZ",
-  "paksPath": "ProjectPBZ\\Content\\Paks",
-  "gameVersion": "CL-301524_JKS-17219",
+  "modsPath": "ProjectPBZ\\PBZModLoader\\mods",
+  "gameVersion": "CL-302256_JKS-17280",
   "engine": "UE5_7",
-  "pakName": "phantombladezero_66daysunlocked_P"
+  "pbzmodloader": "2.1.0"
 }
