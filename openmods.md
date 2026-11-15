@@ -14,7 +14,7 @@ the save: without the mod, 66 Days is locked again until you finish the game.
 
 ## Screenshots
 
-![The difficulty menu of a new game with 66 Days open, on a profile that has not finished the game](docs/screen1.png)
+![The difficulty menu of a new game with 66 Days open, on a profile that has not finished the game](docs/screen1.webp)
 
 ## How to install
 
